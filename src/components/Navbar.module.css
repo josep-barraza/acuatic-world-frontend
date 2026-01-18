@@ -1,0 +1,36 @@
+
+.navbar {
+  
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: #050836; 
+ 
+
+}
+
+.logo {
+  height: 100px;
+  width: 250px;
+}
+
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+
+:global(.nav-link.active) {
+  border-bottom: 2px solid #fff;
+  
+}
+
+
+.boton {
+  margin-top: auto;
+  background: #043c3c;
+  color: white;
+  border: none;
+  padding: .6rem;
+  border-radius: 10px;
+  cursor: pointer;
+}

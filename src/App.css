@@ -1,0 +1,25 @@
+/* FONDO GENERAL */
+.app-background {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #021a2d,
+    #043a5c,
+    #021a2d
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+/* CONTENEDOR DEL CONTENIDO */
+.page-wrapper {
+  flex: 1;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}

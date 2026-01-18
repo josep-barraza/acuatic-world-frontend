@@ -1,0 +1,66 @@
+.piePagina {
+    border : 2px solid rgb(255, 255, 255);
+  background: linear-gradient(135deg, #043c3c, #066666);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+/* Card */
+.productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+
+  background-color: #ffffff;
+  color: #043c3c;
+
+  border-radius: 16px;
+  padding: 2rem;
+  width: 220px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productos:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagen */
+.imgPortada {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 20px;
+  border: 4px solid #ffffff;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.descripcion{
+    background-color: #023636;
+    display: flex;
+    justify-content: center;
+    
+
+
+}
+
+.historia{
+
+    color: #ffffff;
+    padding: 10px;
+    margin: 60px;
+    border-radius: 20px;
+    border: 4px solid #ffffff;
+
+    
+}

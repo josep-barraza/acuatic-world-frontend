@@ -1,0 +1,61 @@
+.footer {
+
+  background: linear-gradient(180deg, #0b1c1f, #131313);
+  color: #e0f7f9;
+
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  border-top: 3px solid #00aebb;
+}
+
+/* Bloque superior */
+.redes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Redes sociales */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social i {
+  font-size: 1.4rem;
+  color: #00aebb;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social i:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Contacto */
+.contacto {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Email */
+.email {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.email strong {
+  color: #00aebb;
+}
+
+

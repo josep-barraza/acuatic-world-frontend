@@ -1,0 +1,121 @@
+.cuerpo{
+ 
+}
+.usuario {
+    
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  text-align: center;
+
+    background-color: #023636;
+  backdrop-filter: blur(6px);
+
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+
+.usuario h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  color: #00c2ff;
+}
+
+.usuario h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.curso {
+    
+    display: flex;
+    justify-content: center;
+      color: #023636;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cursos {
+    
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cursos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #003049;
+  font-weight: 700;
+}
+
+
+.cursosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.cursoCard {
+     background-color: #023636;
+     color: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cursoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  background: #023636;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+.cardImg {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 0.6rem;
+}
+.card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #00c2ff;
+  margin: 0.3rem 0;
+}
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
