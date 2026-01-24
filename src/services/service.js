@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = "http://localhost:3000";
+const URL = import.meta.env.vite_backend_URL;
+
+const API = `${URL}`;
 
 export const getProductos = (page = 1, limit = 8) => {
   return axios.get(

@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = "http://localhost:3000/aquaticWorld";
+const URL = import.meta.env.vite_backend_URL;
+
+const API = `${URL}/aquaticWorld`;
 
 // ✅ COMPRAR CURSO
 export const comprarCursoRequest = (cursoId, token) => {

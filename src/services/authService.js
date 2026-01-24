@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = "http://localhost:3000/aquaticWorld/usuarios";
+const URL = import.meta.env.vite_backend_URL;
+
+const API = `${URL}/aquaticWorld/usuarios`;
 
 export const loginRequest = (data) =>
   axios.post(`${API}/login`, data);

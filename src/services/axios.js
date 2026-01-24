@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const URL = import.meta.env.vite_backend_URL;
+
 const instance = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: `${URL}`,
 });
 
 instance.interceptors.request.use((config) => {
