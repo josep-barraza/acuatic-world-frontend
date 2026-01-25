@@ -90,7 +90,7 @@ const yaComprado = (id) =>
               <div key={m.id} className={style.card}> 
               
               <img 
-                src={`${API_URL}/public${m.img}`}
+                src={`${API_URL}/public/${m.img}`}
                 alt= {m.nombre}
               /> 
               <h4><strong>{m.nombre}</strong></h4>

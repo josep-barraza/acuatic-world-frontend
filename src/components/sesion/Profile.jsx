@@ -46,7 +46,7 @@ const Profile = () => {
   {cursos.map((c) => (
     <div key={c.id} className={style.card}>
       <img
-        src={`${API_URL}/public${c.img}`}
+        src={`${API_URL}/public/${c.img}`}
         alt={c.nombre}
         className={style.cardImg}
       />
