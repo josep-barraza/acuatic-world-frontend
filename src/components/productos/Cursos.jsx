@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { comprarCursoRequest } from "../../services/cursosService.js";
 import { getCursosUsuarioRequest } from '../../services/cursosService.js';
 import { useAuth } from "../../context/useAuth";
+import { API_URL } from "../config/api.js"
 
 
 
@@ -88,7 +89,7 @@ const yaComprado = (id) =>
               <div key={m.id} className={style.card}> 
               
               <img 
-                src={`http://localhost:3000/public/${m.img}`}
+                src={`${API_URL}/${m.img}`}
                 alt= {m.nombre}
               /> 
               <h4><strong>{m.nombre}</strong></h4>

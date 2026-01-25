@@ -1,8 +1,9 @@
 import axios from "axios";
+import { API_URL } from "../config/api.js"
 
-const URL = import.meta.env.VITE_BACKEND_URL;
 
-const API = `${URL}/aquaticWorld`;
+
+const API = `${API_URL}/aquaticWorld`;
 
 // ✅ COMPRAR CURSO
 export const comprarCursoRequest = (cursoId, token) => {

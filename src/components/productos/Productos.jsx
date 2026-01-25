@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getProductos } from "../../services/service.js";
 import style from "./Productos.module.css";
 import imgPrincipal from "../../assets/img/productos.png";
+import { API_URL } from "../config/api.js"
 
 
 const categorias = [
@@ -79,7 +80,7 @@ const Productos = () => {
 
 <div key={p.id} className={style.card}>
   <img
-    src={`http://localhost:3000/public/${p.img}`}
+    src={`${API_URL}/${p.img}`}
     alt={p.nombre}
   />
   <h4>{p.nombre}</h4>

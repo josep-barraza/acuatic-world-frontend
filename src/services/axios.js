@@ -1,9 +1,10 @@
 import axios from "axios";
+import { API_URL } from "../config/api.js"
 
-const URL = import.meta.env.VITE_BACKEND_URL;
+
 
 const instance = axios.create({
-  baseURL: `${URL}`,
+  baseURL: `${API_URL}`,
 });
 
 instance.interceptors.request.use((config) => {

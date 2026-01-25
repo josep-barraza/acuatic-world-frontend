@@ -2,6 +2,7 @@ import style from "./Profile.module.css";
 import { useEffect, useState } from "react";
 import { getCursosUsuarioRequest } from '../../services/cursosService.js';
 import { useAuth } from "../../context/useAuth";
+import { API_URL } from "../config/api.js"
 
 
 const Profile = () => {
@@ -45,7 +46,7 @@ const Profile = () => {
   {cursos.map((c) => (
     <div key={c.id} className={style.card}>
       <img
-        src={`http://localhost:3000/public/${c.img}`}
+        src={`${API_URL}/public/${c.img}`}
         alt={c.nombre}
         className={style.cardImg}
       />

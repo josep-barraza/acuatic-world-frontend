@@ -1,8 +1,8 @@
 import axios from "axios";
+import { API_URL } from "../config/api.js"
 
-const URL = import.meta.env.VITE_BACKEND_URL;
 
-const API = `${URL}`;
+const API = `${API_URL}`;
 
 export const getProductos = (page = 1, limit = 8) => {
   return axios.get(
