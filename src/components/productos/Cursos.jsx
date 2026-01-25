@@ -11,6 +11,7 @@ import { API_URL } from "../config/api.js"
 
 const Cursos = () => {
 
+
   const [cursos, setCursos] = useState([])
 
   const { token } = useAuth();
@@ -89,7 +90,7 @@ const yaComprado = (id) =>
               <div key={m.id} className={style.card}> 
               
               <img 
-                src={`${API_URL}/${m.img}`}
+                src={`${API_URL}/public${m.img}`}
                 alt= {m.nombre}
               /> 
               <h4><strong>{m.nombre}</strong></h4>

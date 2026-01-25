@@ -80,7 +80,7 @@ const Productos = () => {
 
 <div key={p.id} className={style.card}>
   <img
-    src={`${API_URL}/${p.img}`}
+    src={`${API_URL}/public${p.img}`}
     alt={p.nombre}
   />
   <h4>{p.nombre}</h4>
