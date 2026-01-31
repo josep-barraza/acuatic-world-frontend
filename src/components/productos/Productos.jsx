@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { getProductos } from "../../services/service.js";
 import style from "./Productos.module.css";
 import imgPrincipal from "../../assets/img/productos.png";
-import { useCarrito } from "../../context/CarritoContext";
+import { useCarrito } from "../../context/useCarrito";
+
 
 const categorias = [
   "Todas",

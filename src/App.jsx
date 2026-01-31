@@ -12,6 +12,7 @@ import Login from "./components/sesion/Login";
 import Register from "./components/sesion/Register";
 import PrivateRoute from "./components/PrivateRoute";
 import Perfil from "./components/sesion/Profile";
+import Carrito from "./components/productos/Carrito";
 
 function App() {
   return (

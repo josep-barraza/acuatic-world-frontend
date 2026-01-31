@@ -3,7 +3,7 @@ import { CarritoContext } from "./carrito.context";
 import {
   agregarACarritoRequest,
   obtenerCarritoRequest
-} from "../services/carrito.service";
+} from "../services/carrito.service.js";
 
 export const CarritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
