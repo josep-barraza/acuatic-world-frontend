@@ -46,19 +46,28 @@ export default function Navbar() {
               </NavLink>
             </li>
 
-            <li className="nav-item">
+         {/*    <li className="nav-item">
               <NavLink to="/planificacion" className="nav-link">
                 Planifica tu buceo
               </NavLink>
             </li>
-
+ */}
             {isAuth ? (
+              
               <>
+               <li className="nav-item">
+                  <NavLink to="/carrito"  className="nav-link">
+                    carrito
+                  </NavLink>
+                </li>
+
                 <li className="nav-item">
                   <NavLink to="/perfil" className="nav-link">
                     Perfil
                   </NavLink>
                 </li>
+
+            
 
                 <li className="nav-item">
                   <button
