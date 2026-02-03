@@ -4,6 +4,8 @@ import { API_URL } from "../config/api";
 const API = `${API_URL}/aquaticWorld`; 
 
 export const agregarACarritoRequest = (productoId, token) =>
+  console.log("TOKEN ENVIADO:", token);
+
   axios.post(
     `${API}/carrito/agregar`,
     { productoId },
