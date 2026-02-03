@@ -34,13 +34,17 @@ const Productos = () => {
       .catch(console.error);
   }, [page]);
 
-  const productosFiltrados =
-    categoriaActiva === "Todas"
-      ? productos
-      : productos.filter(
-          (p) =>
-            p.categoria.toLowerCase() === categoriaActiva.toLowerCase()
-        );
+const normalizar = (txt) =>
+  txt?.toString().trim().toLowerCase();
+
+const productosFiltrados =
+  categoriaActiva === "Todas"
+    ? productos
+    : productos.filter(
+        (p) =>
+          normalizar(p.categoria) === normalizar(categoriaActiva)
+      );
+
 
   return (
     <section className={style.layout}>

@@ -1,44 +1,53 @@
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AuthContext } from "./AuthContext.js";
 import { loginRequest, registerRequest } from "../services/authService.js";
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(
-    localStorage.getItem("token")
-  );
+  const [token, setToken] = useState(localStorage.getItem("token"));
 
-  useEffect(() => {
-    token
-      ? localStorage.setItem("token", token)
-      : localStorage.removeItem("token");
-  }, [token]);
+/*   LOGIN */
 
-const login = async (data) => {
-  const res = await loginRequest(data);
+  const login = async (data) => {
+    const res = await loginRequest(data);
 
-  setToken(res.data.token);
+    const newToken = res.data.token;
 
-  // opcional: decodificar token
-  setUser({ email: data.email });
-};
+    localStorage.setItem("token", newToken);
+    setToken(newToken);
+  };
+
+  /* 
+  REGISTER
+  */
   const register = async (data) => {
     const res = await registerRequest(data);
-    setUser(res.data.user);
-    setToken(res.data.token);
+
+    const newToken = res.data.token;
+
+    localStorage.setItem("token", newToken);
+    setToken(newToken);
   };
 
+  /* 
+  LOGOUT
+  */
   const logout = () => {
-    setUser(null);
+    localStorage.removeItem("token");
     setToken(null);
   };
-  
-  
+
+ 
+  const isAuth = !!token;
 
   return (
     <AuthContext.Provider
-      value={{ user, token, login, register, logout }}
+      value={{
+        token,
+        isAuth,
+        login,
+        register,
+        logout,
+      }}
     >
       {children}
     </AuthContext.Provider>
@@ -46,22 +55,5 @@ const login = async (data) => {
 };
 
 export default AuthProvider;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
