@@ -1,59 +1,46 @@
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { AuthContext } from "./AuthContext.js";
 import { loginRequest, registerRequest } from "../services/authService.js";
 
 const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
-/*   LOGIN */
+  
+  const user = useMemo(() => {
+    if (!token) return null;
+
+    try {
+      const payload = JSON.parse(atob(token.split(".")[1]));
+      return { email: payload.email };
+    } catch {
+      return null;
+    }
+  }, [token]);
+
+ 
+  useEffect(() => {
+    token
+      ? localStorage.setItem("token", token)
+      : localStorage.removeItem("token");
+  }, [token]);
 
   const login = async (data) => {
     const res = await loginRequest(data);
-
-    const newToken = res.data.token;
-
-    localStorage.setItem("token", newToken);
-    setToken(newToken);
+    setToken(res.data.token);
   };
 
-  /* 
-  REGISTER
-  */
   const register = async (data) => {
     const res = await registerRequest(data);
-
-    const newToken = res.data.token;
-
-    localStorage.setItem("token", newToken);
-    setToken(newToken);
+    setToken(res.data.token);
   };
 
-  /* 
-  LOGOUT
-  */
-  const logout = () => {
-    localStorage.removeItem("token");
-    setToken(null);
-  };
-
- 
-  const isAuth = !!token;
+  const logout = () => setToken(null);
 
   return (
-    <AuthContext.Provider
-      value={{
-        token,
-        isAuth,
-        login,
-        register,
-        logout,
-      }}
-    >
+    <AuthContext.Provider value={{ user, token, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
 export default AuthProvider;
-
-

@@ -27,7 +27,8 @@ const Profile = () => {
 
 
 
-  if (!user) return <div className={style.loader}>Cargando perfil...</div>;
+ if (!token) return <h3>Debes iniciar sesión</h3>;
+
 
   return (
     <>
