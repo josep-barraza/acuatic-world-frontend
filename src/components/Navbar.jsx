@@ -57,7 +57,7 @@ export default function Navbar() {
               <>
                <li className="nav-item">
                   <NavLink to="/carrito"  className="nav-link">
-                    carrito
+                    🛒
                   </NavLink>
                 </li>
 

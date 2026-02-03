@@ -14,8 +14,6 @@ import { CarritoProvider } from "../src/context/CarritoContext.jsx";
 createRoot(document.getElementById('root')).render(
  
   <CarritoProvider>
- 
-
   <BrowserRouter>
   <StrictMode>
      <AuthProvider>
@@ -23,5 +21,5 @@ createRoot(document.getElementById('root')).render(
     </AuthProvider>
   </StrictMode>
   </BrowserRouter>
- </CarritoProvider>
+  </CarritoProvider>
 )
