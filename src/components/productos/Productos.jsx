@@ -88,7 +88,9 @@ const productosFiltrados =
 
               <button
                 className={style.boton}
-                onClick={() => agregarProducto(p.id)}
+                onClick={() => agregarProducto(p.id,
+                  alert("producto agregado al carrito 🎉")
+                )}
               >
                 Agregar al carrito
               </button>
