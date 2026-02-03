@@ -13,6 +13,6 @@ export const agregarACarritoRequest = (productoId, token) =>
   );
 
 export const obtenerCarritoRequest = (token) =>
-  axios.post(`${API}/carrito`, {
+  axios.get(`${API}/carrito`, {
     headers: { Authorization: `Bearer ${token}` }
   });
