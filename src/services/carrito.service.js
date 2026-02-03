@@ -1,7 +1,20 @@
-import instance from "../api/instance"; 
+import axios from "axios";
+import { API_URL } from "../config/api";
 
-export const agregarACarritoRequest = (productoId) =>
-  instance.post("/aquaticWorld/carrito/agregar", { productoId });
+const API = `${API_URL}/aquaticWorld`; 
 
-export const obtenerCarritoRequest = () =>
-  instance.get("/aquaticWorld/carrito");
+export const agregarACarritoRequest = (productoId, token) =>
+ 
+
+  axios.post(
+    `${API}/carrito/agregar`,
+    { productoId },
+    {
+      headers: { Authorization: `Bearer ${token}` }
+    }
+  );
+
+export const obtenerCarritoRequest = (token) =>
+  axios.get(`${API}/carrito`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
