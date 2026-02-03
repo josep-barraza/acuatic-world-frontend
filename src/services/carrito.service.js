@@ -1,7 +1,7 @@
 import axios from "axios";
 import { API_URL } from "../config/api";
 
-const API = `${API_URL}/acuaticworld`;
+const API = `${API_URL}/acuaticWorld`;
 
 export const agregarACarritoRequest = (productoId, token) =>
   axios.post(
