@@ -25,14 +25,14 @@ const Login = () => {
     try {
       await login(form);
 
-      // ✅ limpiar inputs
+     
       setForm({
         email: "",
         password: "",
       });
 
       alert("Login correcto ✅");
-      navigate("/"); // o /perfil
+      navigate("/"); 
     } catch (error) {
       alert(error.response?.data?.msg || "Error al iniciar sesión");
     }

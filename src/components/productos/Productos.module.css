@@ -1,6 +1,4 @@
-/* =========================
-LAYOUT
-========================= */
+
 .layout {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -10,9 +8,7 @@ LAYOUT
   min-height: 100vh;
 }
 
-/* =========================
-CATEGORÍAS
-========================= */
+
 .categorias {
   background: #fff;
   border-radius: 18px;
@@ -33,18 +29,14 @@ CATEGORÍAS
   color: white;
 }
 
-/* =========================
-MAIN
-========================= */
+
 .main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* =========================
-HERO
-========================= */
+
 .hero {
   border-radius: 20px;
   overflow: hidden;
@@ -56,18 +48,13 @@ HERO
   object-fit: cover;
 }
 
-/* =========================
-PRODUCTOS GRID
-========================= */
 .productos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 1.5rem;
 }
 
-/* =========================
-CARD
-========================= */
+
 .card {
   background: white;
   border-radius: 16px;
@@ -93,9 +80,7 @@ CARD
   border-radius: 8px;
 }
 
-/* =========================
-PAGINACIÓN
-========================= */
+
 .paginacion {
   grid-column: 2;
   display: flex;
@@ -103,12 +88,10 @@ PAGINACIÓN
   gap: 1rem;
 }
 
-/* =========================
-📱 MOBILE
-========================= */
+
 @media (max-width: 900px) {
   .layout {
-    grid-template-columns: 1fr; /* 👈 quitar sidebar */
+    grid-template-columns: 1fr; 
   }
 
   .categorias {

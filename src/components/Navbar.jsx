@@ -67,9 +67,7 @@ export default function Navbar() {
                   </NavLink>
                 </li>
 
-            
-
-                <li className="nav-item">
+              <li className="nav-item">
                   <button
                     onClick={handleLogout}
                     className="btn btn-outline-light ms-3"
@@ -77,6 +75,8 @@ export default function Navbar() {
                     Cerrar Sesión
                   </button>
                 </li>
+
+              
               </>
             ) : (
               <>
