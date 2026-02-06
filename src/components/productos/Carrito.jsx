@@ -8,8 +8,13 @@ const Carrito = () => {
   useEffect(() => {
     cargarCarrito();
   }, []);
-
-  // ✅ calcular total automático
+  
+ const {
+  
+  eliminarProducto,
+  vaciarCarrito
+} = useCarrito();
+  
   const total = useMemo(() => {
     return carrito.reduce(
       (acc, item) => acc + item.precio * item.cantidad,
@@ -39,9 +44,19 @@ const Carrito = () => {
             <p>
               Subtotal: <strong>${item.precio * item.cantidad}</strong>
             </p>
+ 
+             <button onClick={() => eliminarProducto(item.id)}>
+             ❌ Eliminar
+             </button>
+
           </div>
         </div>
       ))}
+
+         <button onClick={vaciarCarrito}>
+           🗑 Vaciar carrito
+         </button>
+
 
       <div className={style.totalBox}>
         <h2>Total: ${total}</h2>
