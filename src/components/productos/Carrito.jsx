@@ -3,18 +3,17 @@ import { useCarrito } from "../../context/useCarrito.js";
 import style from "./Carrito.module.css";
 
 const Carrito = () => {
-  const { carrito, cargarCarrito } = useCarrito();
+  const {
+    carrito,
+    cargarCarrito,
+    eliminarProducto,
+    vaciarCarrito
+  } = useCarrito();
 
   useEffect(() => {
     cargarCarrito();
   }, []);
-  
- const {
-  
-  eliminarProducto,
-  vaciarCarrito
-} = useCarrito();
-  
+
   const total = useMemo(() => {
     return carrito.reduce(
       (acc, item) => acc + item.precio * item.cantidad,
@@ -31,7 +30,7 @@ const Carrito = () => {
       <h1>Tu Carrito</h1>
 
       {carrito.map((item) => (
-        <div key={item.id} className={style.card}>
+        <div key={item.producto_id} className={style.card}>
           <img
             src={`https://backend-acuaticworld.onrender.com/public/${item.img}`}
             alt={item.nombre}
@@ -44,19 +43,17 @@ const Carrito = () => {
             <p>
               Subtotal: <strong>${item.precio * item.cantidad}</strong>
             </p>
- 
-             <button onClick={() => eliminarProducto(item.producto_id )}>
-             ❌ Eliminar
-             </button>
 
+            <button onClick={() => eliminarProducto(item.producto_id)}>
+              ❌ Eliminar
+            </button>
           </div>
         </div>
       ))}
 
-         <button onClick={vaciarCarrito}>
-           🗑 Vaciar carrito
-         </button>
-
+      <button onClick={vaciarCarrito}>
+        🗑 Vaciar carrito
+      </button>
 
       <div className={style.totalBox}>
         <h2>Total: ${total}</h2>
