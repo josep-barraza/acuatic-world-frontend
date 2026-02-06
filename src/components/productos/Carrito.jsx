@@ -45,7 +45,7 @@ const Carrito = () => {
               Subtotal: <strong>${item.precio * item.cantidad}</strong>
             </p>
  
-             <button onClick={() => eliminarProducto(item.id)}>
+             <button onClick={() => eliminarProducto(item.producto_id )}>
              ❌ Eliminar
              </button>
 
