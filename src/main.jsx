@@ -13,13 +13,16 @@ import { CarritoProvider } from "../src/context/CarritoContext.jsx";
 
 createRoot(document.getElementById('root')).render(
  
-  <CarritoProvider>
+  
   <BrowserRouter>
   <StrictMode>
      <AuthProvider>
+<CarritoProvider>
+
     <App />
+</CarritoProvider>
     </AuthProvider>
   </StrictMode>
   </BrowserRouter>
-  </CarritoProvider>
+  
 )
