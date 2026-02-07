@@ -20,8 +20,8 @@ export const obtenerCarritoRequest = (token) =>
   });
 
 
-export const eliminarProductoRequest = (productoId, token) =>
-  axios.delete(`${API}/carrito/${productoId}`, {
+export const eliminarProductoRequest = (id, token) =>
+  axios.delete(`${API}/carrito/${id}`, {
     headers: { Authorization: `Bearer ${token}` }
   });
 

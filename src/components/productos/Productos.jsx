@@ -26,7 +26,7 @@ const Productos = () => {
   const [page, setPage] = useState(1);
   const [categoriaActiva, setCategoriaActiva] = useState("Todas");
 
-  const { agregarProducto } = useCarrito(); // ✅ solo UNA vez
+  const { agregarProducto } = useCarrito(); 
 
   useEffect(() => {
     getProductos(page, 8)
@@ -35,7 +35,7 @@ const Productos = () => {
   }, [page]);
 
 const normalizar = (txt) =>
-  txt?.toString().trim().toLowerCase();
+  txt?.toString().trim();
 
 const productosFiltrados =
   categoriaActiva === "Todas"
@@ -45,7 +45,7 @@ const productosFiltrados =
           normalizar(p.categoria) === normalizar(categoriaActiva)
       );
 
-
+ 
   return (
     <section className={style.layout}>
       <aside className={style.categorias}>

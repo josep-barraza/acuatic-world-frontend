@@ -25,12 +25,16 @@ const Carrito = () => {
     return <h2 style={{ textAlign: "center" }}>🛒 Tu carrito está vacío</h2>;
   }
 
+  console.log(carrito)
+
+
   return (
     <section className={style.container}>
       <h1>Tu Carrito</h1>
 
       {carrito.map((item) => (
-        <div key={item.producto_id} className={style.card}>
+        <div key={item.id}
+             className={style.card}>
           <img
             src={`https://backend-acuaticworld.onrender.com/public/${item.img}`}
             alt={item.nombre}
@@ -44,7 +48,7 @@ const Carrito = () => {
               Subtotal: <strong>${item.precio * item.cantidad}</strong>
             </p>
 
-            <button className={style.btnCarrito}   onClick={() => eliminarProducto(item.producto_id)}>
+            <button className={style.btnCarrito}   onClick={() => eliminarProducto(item.id)}>
               ❌ Eliminar
             </button>
           </div>
