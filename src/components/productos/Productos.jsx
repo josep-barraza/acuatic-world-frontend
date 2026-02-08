@@ -28,11 +28,15 @@ const Productos = () => {
 
   const { agregarProducto } = useCarrito();
 
-  useEffect(() => {
-    getProductos(page, 8, categoriaActiva)
-      .then(res => setProductos(res.data.productos))
-      .catch(console.error);
-  }, [page, categoriaActiva]);
+ useEffect(() => {
+  console.log("PAGE:", page);
+
+  getProductos(page, 8, categoriaActiva)
+    .then(res => {
+      console.log(res.data.productos); // 👈 mira si cambian
+      setProductos(res.data.productos);
+    });
+}, [page, categoriaActiva]);
 
   return (
     <section className={style.layout}>
@@ -103,9 +107,13 @@ const Productos = () => {
 
         <h5><strong><span>Página {page}</span></strong></h5>
 
-        <button  onClick={() => setPage(p => p + 1)}>
-          ▶
-        </button>
+      <button
+        disabled={productos.length < 8}
+        onClick={() => setPage(p => p + 1)}
+      >
+       ▶
+      </button>
+
       </div>
     </section>
   );
