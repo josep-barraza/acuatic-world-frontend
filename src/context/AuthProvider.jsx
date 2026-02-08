@@ -29,10 +29,11 @@ const AuthProvider = ({ children }) => {
     setToken(res.data.token);
   };
 
-  const register = async (data) => {
-    const res = await registerRequest(data);
-    setToken(res.data.token);
-  };
+const register = async (data) => {
+  await registerRequest(data);
+};
+
+
 
   const logout = () => setToken(null);
 
