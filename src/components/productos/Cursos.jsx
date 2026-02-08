@@ -96,9 +96,9 @@ const yaComprado = (id) =>
               <h4><strong>{m.nombre}</strong></h4>
               <p>{m.descripcion}</p> 
               <p>Duración {m.duracion} meses</p>
-              <p>Precio $ {m.valor}</p>
+             <h5><strong><p>Precio $ {m.valor}</p></strong></h5>
              {yaComprado(m.id) ? (
-            <span className="badge bg-secondary">Adquirido</span>
+            <span className="badge bg-secondary"><h4>Adquirido</h4></span>
           ) : (
               <button className={style.boton}
               onClick={()=> handleComprar(m.id)}>

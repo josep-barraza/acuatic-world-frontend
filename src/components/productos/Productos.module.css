@@ -38,11 +38,12 @@
 
 
 .hero {
+  padding: 15px;
   background-color: #0d3831;
   border-radius: 20px;
   overflow: hidden;
   color: #fff;
-  border: 8px solid #043c3c ;
+  border: 8px solid #ffffff ;
   position: relative;
 
 }
@@ -95,7 +96,10 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  
 }
+
+
 
 
 @media (max-width: 900px) {

@@ -22,7 +22,14 @@ const Carrito = () => {
   }, [carrito]);
 
   if (!carrito.length) {
-    return <h2 style={{ textAlign: "center" }}>🛒 Tu carrito está vacío</h2>;
+    return <div className={style.carrioVacio} >  
+    <h1 ><strong> 🛒 Tu carrito está vacío </strong></h1> 
+                 
+    <h2><strong>!Que espera agrega los mejores productos ¡</strong></h2>
+
+    <h2><strong> Descubre las profundidades</strong></h2>   
+
+       </div> ;
   }
 
   console.log(carrito)

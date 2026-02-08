@@ -119,3 +119,15 @@
   line-height: 1.4;
   opacity: 0.9;
 }
+
+
+.cursoBtn {
+  
+  background-color: #00c2ff;
+  border: 2px solid aqua ;
+  color:#003049;
+  border-radius: 15px;
+
+
+
+}

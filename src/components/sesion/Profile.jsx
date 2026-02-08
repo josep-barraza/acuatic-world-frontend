@@ -53,8 +53,10 @@ const Profile = () => {
       />
       <h4>{c.nombre}</h4>
       <p>{c.descripcion}</p>
+       <button className={style.cursoBtn}> <strong>ingresar</strong> </button>
     </div>
   ))}
+ 
 </div>
 
 </section>

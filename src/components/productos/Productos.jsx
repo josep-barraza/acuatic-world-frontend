@@ -77,7 +77,7 @@ const Productos = () => {
         <h4>{p.nombre}</h4>
         <span>{p.categoria}</span>
         <p>{p.descripcion}</p>
-        <span>Stock: {p.stock}</span>
+        <p><strong>Valor $ {p.precio} </strong></p>
 
         <button
           className={style.boton}
@@ -97,13 +97,13 @@ const Productos = () => {
 
 
       <div className={style.paginacion}>
-        <button disabled={page === 1} onClick={() => setPage(p => p - 1)}>
+        <button  disabled={page === 1} onClick={() => setPage(p => p - 1)}>
           ◀
         </button>
 
-        <span>Página {page}</span>
+        <h5><strong><span>Página {page}</span></strong></h5>
 
-        <button onClick={() => setPage(p => p + 1)}>
+        <button  onClick={() => setPage(p => p + 1)}>
           ▶
         </button>
       </div>
