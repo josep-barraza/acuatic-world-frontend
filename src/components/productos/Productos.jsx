@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+ import { useEffect, useState } from "react";
 import { getProductos } from "../../services/service.js";
 import style from "./Productos.module.css";
 import imgPrincipal from "../../assets/img/productos.png";
@@ -70,7 +70,7 @@ const Productos = () => {
     {productos.map((p) => (
       <div key={p.id} className={style.card}>
         <img
-          src={`${import.meta.env.VITE_API_URL}/public/${p.img}`}
+          src={`https://backend-acuaticworld.onrender.com/public/${p.img}`}
           alt={p.nombre}
         />
 
@@ -110,3 +110,6 @@ const Productos = () => {
 };
 
 export default Productos
+
+
+
