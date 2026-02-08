@@ -6,7 +6,7 @@ import { useCarrito } from "../../context/useCarrito";
 
 const categorias = [
   "Todas",
-  "Aletas",
+  "Aletas ",
   "Botellas",
   "Botines",
   "Cascos",
@@ -16,7 +16,7 @@ const categorias = [
   "Reguladores",
   "Relojes",
   "Trajes",
-  "Visores",
+  "visores",
   "Guantes",
 ];
 
