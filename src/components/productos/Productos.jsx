@@ -82,8 +82,10 @@ const Productos = () => {
         <button
           className={style.boton}
           onClick={() => {
+            
+          
             agregarProducto(p.id);
-            alert("producto agregado al carrito 🎉");
+            alert ('el producto se agrego a tu carro si iniciaste sesion')
           }}
         >
           Agregar al carrito
